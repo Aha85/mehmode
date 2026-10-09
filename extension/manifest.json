@@ -1,0 +1,49 @@
+{
+  "manifest_version": 3,
+  "name": "MEH MODE",
+  "version": "0.3.3",
+  "minimum_chrome_version": "120",
+  "description": "Make social media bland. Grayscale on your chosen sites. Hold to peek in color.",
+  "permissions": [
+    "storage",
+    "scripting",
+    "sidePanel"
+  ],
+  "optional_host_permissions": [
+    "https://facebook.com/*",
+    "https://www.facebook.com/*",
+    "https://instagram.com/*",
+    "https://www.instagram.com/*",
+    "https://linkedin.com/*",
+    "https://www.linkedin.com/*",
+    "https://tiktok.com/*",
+    "https://www.tiktok.com/*",
+    "https://x.com/*",
+    "https://www.x.com/*",
+    "https://twitter.com/*",
+    "https://www.twitter.com/*"
+  ],
+  "background": {
+    "service_worker": "background/service-worker.js",
+    "type": "module"
+  },
+  "side_panel": { "default_path": "popup/popup.html" },
+  "action": {
+    "default_title": "MEH MODE",
+    "default_icon": {
+      "16": "assets/icon-16.png",
+      "32": "assets/icon-32.png",
+      "48": "assets/icon-48.png",
+      "128": "assets/icon-128.png"
+    }
+  },
+  "icons": {
+    "16": "assets/icon-16.png",
+    "32": "assets/icon-32.png",
+    "48": "assets/icon-48.png",
+    "128": "assets/icon-128.png"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'none'; connect-src 'none';"
+  }
+}

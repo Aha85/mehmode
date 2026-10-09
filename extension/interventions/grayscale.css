@@ -1,0 +1,4 @@
+/* One rendering change. Never modify the site's own inline styles. */
+html[data-meh-mode-grayscale="on"] {
+  filter: grayscale(1) !important;
+}

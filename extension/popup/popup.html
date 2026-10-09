@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MEH MODE</title>
+  <link rel="stylesheet" href="popup.css">
+  <script type="module" src="popup.js"></script>
+</head>
+<body>
+  <main>
+    <p id="panel-position" class="hint" hidden>Want MEH on the right? In Chrome Settings → Appearance, set Side panel to Show on right.</p>
+    <header class="brand">
+      <svg class="face" viewBox="0 0 80 80" aria-hidden="true">
+        <path d="M40 5C61 4 75 20 74 41C75 60 59 75 39 74C19 76 5 61 6 40C4 20 20 5 40 5Z"/>
+        <circle cx="28" cy="33" r="3"/><circle cx="52" cy="33" r="3"/>
+        <path d="M26 50H54"/>
+      </svg>
+      <div><h1>MEH MODE</h1><p class="tagline">Make social media bland.</p></div>
+    </header>
+
+    <section class="current" aria-labelledby="current-heading">
+      <h2 id="current-heading">A little less interesting.</h2>
+      <p id="current-status" role="status">Checking this page...</p>
+      <button id="peek" class="peek" type="button" disabled aria-describedby="peek-help">
+        <span class="hold-symbol" aria-hidden="true">●</span>
+        <span>Hold to peek in color</span>
+      </button>
+      <p id="peek-help" class="hint">Just this page. Release to return to grayscale.</p>
+      <form id="pause-form" hidden>
+        <label for="reason">What are you here to do, and why do you need color?</label>
+        <textarea id="reason" rows="3" required maxlength="500" placeholder="Write your answer to continue." aria-describedby="reason-help"></textarea>
+        <p id="reason-help" class="hint">Only this visit, in this tab. Reloading restores grayscale. Your answer is never saved or sent.</p>
+        <div class="pause-actions"><button id="confirm-pause" type="submit" disabled>Turn off for this visit</button><button id="cancel-pause" type="button">Keep it meh</button></div>
+      </form>
+    </section>
+
+    <section class="sites" aria-labelledby="sites-heading">
+      <div class="section-heading"><h2 id="sites-heading">Where to meh</h2><span id="site-summary">All off</span></div>
+      <p id="first-run" class="intro">Choose your sites. Keep what you came for.</p>
+      <div id="site-list"></div>
+      <p class="permission-note">Enable sites once. To turn one off, open it and answer a question. Off lasts only for that visit.</p>
+    </section>
+
+    <p id="error" class="error" role="alert" hidden></p>
+    <footer>
+      <button id="about-toggle" class="text-button" type="button" aria-expanded="false" aria-controls="about">About &amp; privacy</button>
+      <span class="version">v0.3.3</span>
+    </footer>
+    <section id="about" class="about" hidden>
+      <h2>Why MEH MODE?</h2>
+      <p>You open social media to do one thing. Then, somehow, twenty minutes disappear.</p>
+      <p>MEH MODE makes the sites you choose feel quieter without blocking them. Everything still works, but there is less color competing for your attention.</p>
+      <h3>How it works</h3>
+      <p>Choose your sites and browse normally in grayscale. Need color? Hold <strong>Peek in color</strong>. Release it and the page goes back to gray.</p>
+      <p>Turning grayscale off asks you to write why. Your answer is not judged or saved. It simply gives you a moment to decide what you want to do.</p>
+      <p class="honest-note">We are still testing whether this helps people scroll less while getting their work done. It may not work the same way for everyone.</p>
+      <h3>Stays on your device</h3>
+      <p>Only your site choices are saved. No accounts, browsing history, analytics, or data sent by MEH MODE.</p>
+      <p>MEH MODE needs permission to change the appearance of the social sites you choose. It uses this access only to apply or remove grayscale. It does not read, save, or send your posts, messages, form entries, or other page content.</p>
+      <p>Visit-only OFF keeps website access so grayscale returns next visit. Answers are never saved or sent. You can revoke access or uninstall through Chrome.</p>
+      <p>Questions? Email <a href="mailto:sonorus.co@gmail.com">sonorus.co@gmail.com</a>.</p>
+    </section>
+  </main>
+</body>
+</html>
